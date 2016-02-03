@@ -1,1 +1,34 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<link href="./myapp/shared/styles/main.css" rel="stylesheet">
+
+<body ng-app="myApp" ng-controller="taskController">
+
+<div header></div>
+
+
+<div>
+  <ng-view></ng-view>
+</div>
+
+
+<div footer></div>
+
+
+<!-- Resources -->
+<script src="./myapp/angular.min.js"></script>
+<script  src="./myapp/angular-route.min.js"></script>
+<!-- Modules -->
+<script src="./myapp/app.js"></script>
+<script  src="./myapp/config.js"></script>
+<!-- Services -->
+<script  src="./myapp/services/TaskServices.js"></script>
+<!-- Controllers -->
+<script src="./myapp/controllers/controller.js"></script>
+<!-- Directives -->
+<script  src="./myapp/shared/directives/directives.js"></script>
+
+
+
+</body>
+</html>

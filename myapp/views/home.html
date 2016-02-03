@@ -1,0 +1,41 @@
+<form novalidate>
+    Title:<br>
+    <input type="text" ng-model="title">
+    <br>Description:<br>
+    <input type="text" ng-model="desc">
+    <br>Date:<br>
+    <input type="date" ng-model="date">
+    <br>Time:<br>
+    <input type="time" ng-model="time">
+    <br><br>
+  </form>
+  <button ng-click="addRow()">submit</button>
+  <p type="text" ng-model="todo.data">
+    <table class="table">
+    <tr>
+      <th>Title
+      </th>
+      <th>Desc
+      </th>
+      <th>Date
+      </th>
+      <th>Time
+      </th>
+      </tr>
+    <tr ng-repeat="task in tasks">
+      <td>{{task.title}}
+      </td>
+      <td>{{task.desc}}
+      </td>
+      <td>{{task.date}}
+      </td>
+      <td>{{task.time}}
+      </td>
+      <td>
+      <td  ng-show="task.done">I am done
+      </td>
+      <td>
+      <button ng-show="!task.done" ng-click='markDone(task)'>Mark as Done</button>
+      </td>
+      </tr>
+    </table>

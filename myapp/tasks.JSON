@@ -1,0 +1,22 @@
+[{
+	"title": "Clear data",
+	"desc": "clear all the data from the database",
+	"date": "12-01-2016",
+	"done": true,
+	"time": "12:30"
+}, {
+	"title": "Load data",
+	"desc": "load all the data from the database",
+	"date": "12-02-2016",
+	"done": false,
+	"time": "12:30"
+},
+{
+	"title": "Create new tables",
+	"desc": "Create a fresh db and load with new tables schema",
+	"date": "12-02-2017",
+	"done": false,
+	"time": "12:30"
+}
+
+]
