@@ -2,22 +2,25 @@
 <html lang="en">
 <link href="./myapp/shared/styles/main.css" rel="stylesheet">
 
-<body ng-app="myApp" ng-controller="taskController">
+<body ng-app="myApp" ng-controller="mainController">
 
 <div header></div>
 
-
-<div>
-  <ng-view></ng-view>
-</div>
-
+<div class="row">
+    <div>
+      <div ui-view="createTaskView"></div>
+    </div>
+    <div>
+      <div ui-view="listTaskView"></div>
+    </div>
+  </div>
 
 <div footer></div>
 
-
 <!-- Resources -->
 <script src="./myapp/angular.min.js"></script>
-<script  src="./myapp/angular-route.min.js"></script>
+<script  src="./myapp/angular-ui-router.js"></script>
+<script  src="./myapp/angular-messages.js"></script>
 <!-- Modules -->
 <script src="./myapp/app.js"></script>
 <script  src="./myapp/config.js"></script>
@@ -25,10 +28,9 @@
 <script  src="./myapp/services/TaskServices.js"></script>
 <!-- Controllers -->
 <script src="./myapp/controllers/controller.js"></script>
+
 <!-- Directives -->
 <script  src="./myapp/shared/directives/directives.js"></script>
-
-
 
 </body>
 </html>
