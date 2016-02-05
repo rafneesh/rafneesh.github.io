@@ -12,11 +12,22 @@ myApp.controller('mainController', function($scope,TaskServices) {
               );
   };
   $scope.loadTasks();
-  $scope.addRow = function(){
+
+
+  $scope.forms = [
+        { title: '', desc: '', date: '', desc:''}
+      ]
+
+  $scope.addFields = function () {
+            $scope.forms.push({ title: '', desc: '', date: '', desc:''});
+  }
+
+  $scope.addRow = function(form){
 
     console.log('Validation status'+this.taskForm.$valid);
+    console.log('Validation status'+form.title);
     if(this.taskForm.$valid){
-    this.tasks.push({ 'title':this.title, 'desc': this.desc, 'date':this.date, 'done':false, 'time':this.time });
+    this.tasks.push({ 'title':form.title, 'desc': form.desc, 'date':form.date, 'done':false, 'time':form.time });
     $scope.title='';
     $scope.desc='';
     $scope.date='';

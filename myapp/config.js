@@ -1,7 +1,7 @@
 myApp.config(function($stateProvider){
     $stateProvider
         .state('home', {
-            url: "/",
+            url: "",
             views: {
 							  "createTaskView": {
                     templateUrl: "./myapp/views/createTask.html"

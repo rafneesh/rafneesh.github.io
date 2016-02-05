@@ -1,6 +1,6 @@
-<form name ="taskForm" ng-submit="addRow()" novalidate>
+<form name ="taskForm" ng-repeat="form in forms" ng-submit="addRow()" novalidate >
     Title:<br>
-    <input type="text" name="title" ng-model="title" required>
+    <input type="text" name="title" ng-model="form.title" required>
     <div ng-messages="taskForm.title.$error"
     ng-if="taskForm.desc.$dirty">
       <div ng-message="required">This field is required</div>
@@ -8,7 +8,7 @@
     </div>
 
     <br>Description:<br>
-    <input type="text" name="desc" ng-model="desc" required>
+    <input type="text" name="desc" ng-model="form.desc" required>
     <div ng-messages="taskForm.desc.$error"
       ng-if="taskForm.desc.$dirty">
       <div ng-message="required">This field is required</div>
@@ -16,7 +16,7 @@
     </div>
 
     <br>Date:<br>
-    <input type="date" name= "date" ng-model="date" >
+    <input type="date" name= "date" ng-model="form.date" >
     <!-- <div ng-messages="taskForm.date.$error"
           ng-if="taskForm.date.$dirty">
       <div ng-message="required">This field is required</div>
@@ -24,7 +24,7 @@
     </div>
 
     <br>Time:<br>
-    <input type="time" name="time" ng-model="time" >
+    <input type="time" name="time" ng-model="form.time" >
     <!-- <div ng-messages="taskForm.time.$error"
 ng-if="taskForm.time.$dirty">
 
@@ -32,5 +32,6 @@ ng-if="taskForm.time.$dirty">
       <div ng-message="time">Input is invalid</div> -->
     </div>
     <br><br>
-    <input type="submit" value = "submit"></input>
+    <input type="button" value = "Add" ng-click="addFields()"></input>
+    <input type="button" value = "Save" ng-click="addRow(form)"></input>
   </form >
