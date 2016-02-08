@@ -1,4 +1,4 @@
-
+<!--
     <table class="table" >
     <tr>
       <th>Title
@@ -8,6 +8,8 @@
       <th>Date
       </th>
       <th>Time
+      </th>
+      <th>Status
       </th>
       </tr>
     <tr ng-repeat="task in tasks">
@@ -19,11 +21,18 @@
       </td>
       <td>{{task.time}}
       </td>
-      <td>
       <td  ng-show="task.done">I am done
       </td>
-      <td>
-      <button ng-show="!task.done" ng-click='markDone(task)'>Mark as Done</button>
+      <td id="button">
+        <button ng-show="!task.done" ng-click='markDone(task)'>Done</button>
       </td>
-      </tr>
-    </table>
+    </tr>
+    </table> -->
+
+
+<p> Things to do . . . </p>
+<div class="numberlist">
+  <ol>
+    <li ng-repeat="task in tasks"><a href="">{{task.title}}</a></li>
+  </ol>
+</div>

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href="./myapp/shared/styles/main.css" rel="stylesheet">
+<link href="myapp/assets/assets/myapp.css" rel="stylesheet">
 
 <body ng-app="myApp" ng-controller="mainController">
 
-<div header></div>
+<header>TO DO APP</header>
 
 <div class="row">
-    <div>
+    <div class="createTaskView">
       <div ui-view="createTaskView"></div>
     </div>
-    <div>
+    <div class="listTaskView">
       <div ui-view="listTaskView"></div>
     </div>
-  </div>
+ </div>
 
-<div footer></div>
+<footer>QBurst</footer>
 
 <!-- Resources -->
 <script src="./myapp/angular.min.js"></script>

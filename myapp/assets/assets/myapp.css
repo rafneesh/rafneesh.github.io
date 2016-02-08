@@ -1,0 +1,139 @@
+body.ng-scope {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+header {
+    color: white;
+    background: #06a3e4;
+    padding: 25px;
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+.createTaskView {
+    width: 35%;
+    float: left;
+    margin: 13px;
+    padding: 13px;
+    padding-right: 0 !important;
+    border: 2px solid;
+}
+.row {
+    width: 100%;
+    overflow: auto;
+}
+.title div {
+    width: 20%;
+    float: left;
+}
+.title {
+    padding: 6px;
+}
+.listTaskView {
+    float: right;
+}
+.add{
+  margin-top:10px;
+}
+.remove{
+  margin-top:10px;
+}
+table, tr, td, th {
+    border: 1px solid #AAA;
+    border-collapse: collapse;
+        padding: 8px;
+}
+td#button {
+    padding: 0;
+}
+button {
+    width: 70px;
+    margin-left: 6px;
+    color: white;
+    background: #06a3e4;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+}
+form {
+    margin-bottom: 15px;
+}
+div#update-btn {
+    margin-top: 10px;
+    text-align: center;
+}
+input[type="button"] {
+    width: 87px;
+    background: #06a3e4;
+    border: none;
+    height: 28px;
+    color: white;
+    border-radius: 3px;
+    outline: none;
+}
+.title input {
+    width: 75%;
+}
+footer {
+    bottom: 0;
+    position: fixed;
+    padding: 25px;
+    background: #06a3e4;
+    width: 100%;
+    color: white;
+}
+/* css list with numeber circle background -------------- */
+	.numberlist{
+	    width:450px;
+}
+	.numberlist ol{
+	                counter-reset: li;
+	                list-style: none;
+	                *list-style: decimal;
+	                font: 15px 'trebuchet MS', 'lucida sans';
+	                padding: 0;
+	                margin-bottom: 4em;
+
+	}
+	.numberlist ol ol{
+	                margin: 0 0 0 2em;
+	            }
+
+	.numberlist a{
+	                position: relative;
+	                display: block;
+	                padding: .4em .4em .4em 2em;
+	                *padding: .4em;
+	                margin: .5em 0;
+	                background: #FFF;
+	                color: #444;
+	                text-decoration: none;
+-moz-border-radius: .3em;
+	                -webkit-border-radius: .3em;
+	                border-radius: .3em;
+	            }
+
+	.numberlist a:hover{
+	                background: #cbe7f8;
+	                text-decoration:underline;
+	            }
+.numberlist a:before{
+	                content: counter(li);
+	                counter-increment: li;
+	                position: absolute;
+	                left: -1.3em;
+	                top: 50%;
+	                margin-top: -1.3em;
+	                background: #87ceeb;
+	                height: 2em;
+	                width: 2em;
+	                line-height: 2em;
+	                border: .3em solid #fff;
+	                text-align: center;
+	                font-weight: bold;
+	                -moz-border-radius: 2em;
+	                -webkit-border-radius: 2em;
+	                border-radius: 2em;
+                  color:#FFF;
+	            }

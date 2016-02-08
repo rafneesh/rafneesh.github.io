@@ -22,16 +22,22 @@ myApp.controller('mainController', function($scope,TaskServices) {
             $scope.forms.push({ title: '', desc: '', date: '', desc:''});
   }
 
-  $scope.addRow = function(form){
+  $scope.deleteFields = function () {
+              console.log("deleting");
+            $scope.forms.pop();
+            console.log("deleted");
+  }
+
+  $scope.saveTasks = function(form){
 
     console.log('Validation status'+this.taskForm.$valid);
-    console.log('Validation status'+form.title);
+    console.log('Validation status'+this.form.title);
     if(this.taskForm.$valid){
-    this.tasks.push({ 'title':form.title, 'desc': form.desc, 'date':form.date, 'done':false, 'time':form.time });
-    $scope.title='';
-    $scope.desc='';
-    $scope.date='';
-    $scope.done='';
+    this.tasks.push({ 'title':this.form.title, 'desc': this.form.desc, 'date':this.form.date, 'done':false, 'time':this.form.time });
+    this.form.title='';
+    this.form.desc='';
+    this.form.date='';
+    this.form.time='';
   }
   };
   $scope.markDone = function(task){
