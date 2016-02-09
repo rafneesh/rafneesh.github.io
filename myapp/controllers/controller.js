@@ -31,14 +31,17 @@ myApp.controller('mainController', function($scope,TaskServices) {
   $scope.saveTasks = function(form){
 
     console.log('Validation status'+this.taskForm.$valid);
-    console.log('Validation status'+this.form.title);
+    console.log('Titlw'+this.form.title+" Desc"+this.form+" Date:"+this.form.date+" Time:"+this.form.time);
     if(this.taskForm.$valid){
     this.tasks.push({ 'title':this.form.title, 'desc': this.form.desc, 'date':this.form.date, 'done':false, 'time':this.form.time });
     this.form.title='';
     this.form.desc='';
     this.form.date='';
     this.form.time='';
-  }
+    this.taskForm.$setPristine();
+    }else{
+    alert("Please enter all the required data");
+    }
   };
   $scope.markDone = function(task){
     task.done = true;

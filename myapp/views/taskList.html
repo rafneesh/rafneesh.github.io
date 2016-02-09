@@ -33,6 +33,17 @@
 <p> Things to do . . . </p>
 <div class="numberlist">
   <ol>
-    <li ng-repeat="task in tasks"><a href="">{{task.title}}</a></li>
+    <li ng-repeat="task in tasks"><a href="">{{task.title}}</a>
+    <ol>
+        <li><a href="">{{task.desc}}</a></li>
+        <li ng-show="task.date+task.time"><a href="">{{task.date | date:"MM/dd/yyyy 'at' h:mma"}}</a></li>
+        <li ng-show="task.time"><a href="">{{task.time}}</a></li>
+        <td id="button">
+          <button ng-show="!task.done" ng-click='markDone(task)'>Mark Done</button>
+        </td>
+        <li class="message"  ng-show="task.done">This is done</li>
+
+    </ol>
+    </li>
   </ol>
 </div>

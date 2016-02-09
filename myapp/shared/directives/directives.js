@@ -18,4 +18,4 @@ myApp.directive('header',function(){
 		controller:['$scope', '$filter', function ($scope, $filter) {
         }]
 	}
-})
+});

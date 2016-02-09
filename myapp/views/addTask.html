@@ -1,19 +1,19 @@
 <p>Enter your Task/s</p>
-<fieldset name ="taskFieldSet" ng-repeat="form in forms" novalidate >
-    <form name ="taskForm">
+<fieldset name ="taskFieldSet" ng-repeat="form in forms" >
+    <form name ="taskForm" ng-submit="saveTasks(this)" novalidate>
       <div class="title">
-        <div>Title:</div>
+        <div>Title:*</div>
         <input type="text" name="title" ng-model="form.title" required>
       </div>
       <div ng-messages="taskForm.title.$error"
-      ng-if="taskForm.desc.$dirty">
+      ng-if="taskForm.title.$dirty">
         <div ng-message="required">This field is required</div>
         <div ng-message="text">Input is invalid</div>
       </div>
 
       <div class="title">
-        <div>Description:</div>
-        <input type="text" name="desc" ng-model="form.desc" required>
+        <div>Description:*</div>
+        <textarea type="text" name="desc" ng-model="form.desc" required></textarea>
       </div>
       <div ng-messages="taskForm.desc.$error"
         ng-if="taskForm.desc.$dirty">
@@ -23,7 +23,15 @@
 
       <div class="title">
         <div>Date:</div>
-        <input type="date" name= "date" ng-model="form.date" >
+        <input type="date" class="form1"
+  value="{{form.date | date:MM/dd/yyyy}}"
+  ng-model="form.date"
+  name="date"
+  validatedateformat
+  data-date-format="mm/dd/yyyy"
+  maxlength="10"
+  calendar
+  </input>
       </div>
       <!-- <div ng-messages="taskForm.date.$error"
             ng-if="taskForm.date.$dirty">
@@ -32,7 +40,7 @@
       </div>
       <div class="title">
         <div>Time:</div>
-        <input type="time" name="time" ng-model="form.time" >
+        <input type=time name="time" ng-model="form.time" >
       </div>
       <!-- <div ng-messages="taskForm.time.$error"
   ng-if="taskForm.time.$dirty">

@@ -84,10 +84,10 @@ footer {
     color: white;
 }
 /* css list with numeber circle background -------------- */
-	.numberlist{
+.numberlist{
 	    width:450px;
 }
-	.numberlist ol{
+.numberlist ol{
 	                counter-reset: li;
 	                list-style: none;
 	                *list-style: decimal;
@@ -96,11 +96,11 @@ footer {
 	                margin-bottom: 4em;
 
 	}
-	.numberlist ol ol{
+.numberlist ol ol{
 	                margin: 0 0 0 2em;
 	            }
 
-	.numberlist a{
+.numberlist a{
 	                position: relative;
 	                display: block;
 	                padding: .4em .4em .4em 2em;
@@ -114,7 +114,7 @@ footer {
 	                border-radius: .3em;
 	            }
 
-	.numberlist a:hover{
+.numberlist a:hover{
 	                background: #cbe7f8;
 	                text-decoration:underline;
 	            }
@@ -137,3 +137,26 @@ footer {
 	                border-radius: 2em;
                   color:#FFF;
 	            }
+              .numberlist ol ol a:before{
+              	                content: ".";
+              	                counter-increment: li;
+              	                position: absolute;
+              	                left: -1.3em;
+              	                top: 50%;
+              	                margin-top: -1.3em;
+              	                background: #87ceeb;
+              	                height: 2em;
+              	                width: 2em;
+              	                line-height: 2em;
+              	                border: .3em solid #fff;
+              	                text-align: center;
+              	                font-weight: bold;
+              	                -moz-border-radius: 2em;
+              	                -webkit-border-radius: 2em;
+              	                border-radius: 2em;
+                                color:#FFF;
+              	            }
+.message{
+  color: grey;
+  
+}
