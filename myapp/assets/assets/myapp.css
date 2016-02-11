@@ -167,5 +167,7 @@ footer {
               	            }
 .message{
   color: grey;
-
+}
+.errorMessage{
+    color: red;
 }

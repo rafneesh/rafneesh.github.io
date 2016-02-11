@@ -30,7 +30,8 @@
     </table> -->
 
 
-<p style="font-size:25px;"><b> Things to do . . . </p><a href="" ng-click='orderByDate()'>   Order By Date </a><a href="" ng-click='orderByDefault()'>   Reset</a>
+<p style="font-size:25px;"><b> Things to do . . . </p><a href="" ng-click='orderByDate()'>   Order By Date </a>
+  <p><a href="" ng-click='orderByDefault()'>   Reset</a></p>
 <div class="numberlist">
   <ol>
     <li ng-repeat="task in tasks | orderBy:myOrderBy"><a href="">{{task.title}}</a>

@@ -41,7 +41,7 @@ myApp.controller('mainController', function($scope,TaskServices) {
     this.taskForm.$setPristine();
     alert("Task Created..");
     }else{
-    alert("Please enter all the required data");
+    alert("Please enter all the required/valid data");
     }
   };
   $scope.markDone = function(task){

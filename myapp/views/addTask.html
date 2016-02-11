@@ -5,7 +5,7 @@
         <div>Title:*</div>
         <input type="text" name="title" ng-model="form.title" required>
       </div>
-      <div ng-messages="taskForm.title.$error"
+      <div class="errorMessage" ng-messages="taskForm.title.$error"
       ng-if="taskForm.title.$dirty">
         <div ng-message="required">This field is required</div>
         <div ng-message="text">Input is invalid</div>
@@ -15,7 +15,7 @@
         <div>Description:*</div>
         <textarea type="text" name="desc" ng-model="form.desc" required></textarea>
       </div>
-      <div ng-messages="taskForm.desc.$error"
+      <div class="errorMessage" ng-messages="taskForm.desc.$error"
         ng-if="taskForm.desc.$dirty">
         <div ng-message="required">This field is required</div>
         <div ng-message="text">Input is invalid</div>
@@ -33,7 +33,7 @@
   calendar
   </input>
       </div>
-      <div ng-messages="taskForm.date.$error"
+      <div class="errorMessage" ng-messages="taskForm.date.$error"
             ng-if="taskForm.date.$dirty">
         <div ng-message="required">This field is required</div>
         <div ng-message="date">Input is invalid</div>
@@ -42,7 +42,7 @@
         <div>Time:</div>
         <input type="time" name="time" ng-model="form.time" laceholder="HH:mm:ss" min="00:00:00" max="24:00:00"></input>
       </div>
-      <div ng-messages="taskForm.time.$error"
+      <div class="errorMessage" ng-messages="taskForm.time.$error"
   ng-if="taskForm.time.$dirty">
         <div ng-message="required">This field is required</div>
         <div ng-message="time">Input is invalid</div>
