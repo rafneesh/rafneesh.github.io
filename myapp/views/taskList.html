@@ -30,14 +30,14 @@
     </table> -->
 
 
-<p> Things to do . . . </p>
+<p style="font-size:25px;"><b> Things to do . . . </p><a href="" ng-click='orderByDate()'>   Order By Date </a>
 <div class="numberlist">
   <ol>
-    <li ng-repeat="task in tasks"><a href="">{{task.title}}</a>
+    <li ng-repeat="task in tasks | orderBy:myOrderBy"><a href="">{{task.title}}</a>
     <ol>
         <li><a ="">{{task.desc}}</a></li>
-        <li ng-show="task.date+task.time"><a href="">{{task.date | date:"MM/dd/yyyy 'at' h:mma"}}</a></li>
-        <li ng-show="task.time"><a href="">{{task.time}}</a></li>
+        <li ng-show="task.date+task.time"><a href="">{{task.date | date:'yyyy-MM-dd'}}</a></li>
+        <li ng-show="task.time"><a href="">{{task.time | date:'HH:mm:ss'}}</a></li>
         <td id="button">
           <button ng-show="!task.done" ng-click='markDone(task)'>Mark Done</button>
         </td>

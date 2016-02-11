@@ -39,12 +39,16 @@ myApp.controller('mainController', function($scope,TaskServices) {
     this.form.date='';
     this.form.time='';
     this.taskForm.$setPristine();
+    alert("Task Created..");
     }else{
     alert("Please enter all the required data");
     }
   };
   $scope.markDone = function(task){
     task.done = true;
+  };
+  $scope.orderByDate = function(){
+    $scope.myOrderBy = 'date';
   };
 
 
