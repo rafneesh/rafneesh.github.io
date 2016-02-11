@@ -50,6 +50,9 @@ myApp.controller('mainController', function($scope,TaskServices) {
   $scope.orderByDate = function(){
     $scope.myOrderBy = 'date';
   };
+  $scope.orderByDefault = function(){
+    $scope.myOrderBy = '';
+  };
 
 
 

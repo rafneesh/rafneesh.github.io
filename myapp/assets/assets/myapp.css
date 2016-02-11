@@ -4,8 +4,8 @@ body.ng-scope {
     font-family: sans-serif;
 }
 header {
-    color: white;
     background: #06a3e4;
+    color: white;
     padding: 25px;
     font-weight: bold;
     font-size: 25px;
@@ -82,7 +82,16 @@ footer {
     background: #06a3e4;
     width: 100%;
     color: white;
+    font-size: 25px;
 }
+#footer_container {
+    clear: both;
+    margin-top: 150px;
+    z-index: 1;
+    width: 100%;
+}
+
+
 /* css list with numeber circle background -------------- */
 .numberlist{
 	    width:450px;
